@@ -1,0 +1,129 @@
+{% load static %}
+{% load active_link_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="{% static 'css/layout/6612.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <title></title>
+</head>
+<body>
+    <header>
+        <div class="topHeader">
+            <div class="sideHeader">
+                <div class="lefthead">
+                    <a href="{% url 'index' %}"><img src="{% static 'img/asset/nav/logo.png' %}" alt=""></a>
+                </div>
+                <div class="righthead">
+                    <div class="userInfo">
+                    </div>
+                    <div class="flex sideBtn">
+                        <a href="{% url 'khuyenmai' %}"><img src="{% static 'img/asset/nav/km.svg' %}" alt=""></a>
+                        <img src="{% static 'img/asset/nav/daily.svg' %}" alt="">
+                        <img src="{% static 'img/asset/nav/app.svg' %}" alt="">
+                        <img src="{% static 'img/asset/nav/naptien.svg' %}" alt="">
+                        <img src="{% static 'img/asset/nav/ruttien.svg' %}" alt="">
+                        <img src="{% static 'img/asset/nav/chuyenkhoan.svg' %}" alt="">
+                        <img src="{% static 'img/asset/nav/dangnhap.svg' %}" alt="">
+                        <img src="{% static 'img/asset/nav/dangki.svg' %}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mainHeader">
+            <button class="navItem" id="noDrop">
+                <a href="{% url 'hot' %}" class="{% if request.resolver_match.url_name == 'hot' %} navlink {% endif %}">HOT</a>
+            </button>
+            <button class="navItem">
+                <a href="{% url 'casino' %}" class="{% if request.resolver_match.url_name == 'casino' %} navlink {% endif %}">CASINO</a>
+                <div class="drop">
+                    <a href="#"><img src="{% static 'img/asset/casino/drop/DG.jpg'%}" alt=""></a>
+                    <a href="#"><img src="{% static 'img/asset/casino/drop/SE.jpg'%}" alt=""></a>
+                    <a href="#"><img src="{% static 'img/asset/casino/drop/WM.jpg'%}" alt=""></a>
+                    <a href="#"><img src="{% static 'img/asset/casino/drop/EV.jpg'%}" alt=""></a>
+                    <a href="#"><img src="{% static 'img/asset/casino/drop/SA.jpg'%}" alt=""></a>
+                    <a href="#"><img src="{% static 'img/asset/casino/drop/MT.jpg'%}" alt=""></a>
+                </div>
+            </button>
+            <button class="navItem">
+                <a href="{% url 'thethao' %}" class="{% if request.resolver_match.url_name == 'thethao' %} navlink {% endif %}">THỂ THAO</a>
+                <div class="drop">
+                    <a href="#"><img src="{% static 'img/asset/thethao/drop/cmd.jpg'%}" alt=""></a>
+                    <a href="#"><img src="{% static 'img/asset/thethao/drop/cr.jpg'%}" alt=""></a>
+                    <a href="#"><img src="{% static 'img/asset/thethao/drop/im.jpg'%}" alt=""></a>
+                    <a href="#"><img src="{% static 'img/asset/thethao/drop/saba.jpg'%}" alt=""></a>
+                    <a href="#"><img src="{% static 'img/asset/thethao/drop/sbo.jpg'%}" alt=""></a>
+                    <a href="#"><img src="{% static 'img/asset/thethao/drop/ug.jpg'%}" alt=""></a>
+                </div>
+            </button>
+            <button class="navItem">
+                <a href="{% url 'xoso' %}" class="{% if request.resolver_match.url_name == 'xoso' %} navlink {% endif %}">LÔ ĐỀ</a>
+                <div class="drop">
+                    <a href="#"><img src="{% static 'img/asset/xoso/drop/gw.jpg'%}" alt=""></a>
+                    <a href="#"><img src="{% static 'img/asset/xoso/drop/sw.jpg'%}" alt=""></a>
+                    <a href="#"><img src="{% static 'img/asset/xoso/drop/tp.jpg'%}" alt=""></a>
+                    <a href="#"><img src="{% static 'img/asset/xoso/drop/vr.jpg'%}" alt=""></a>
+                </div>
+            </button>
+            <button class="navItem">
+                <a href="{% url 'nohu' %}" class="{% if request.resolver_match.url_name == 'nohu' %} navlink {% endif %}">NỔ HŨ</a>
+                <div class="drop">
+                    <a href="#"><img src="{% static 'img/asset/nohu/drop/cq9.png'%}" alt=""></a>
+                    <a href="#"><img src="{% static 'img/asset/nohu/drop/fc.png'%}" alt=""></a>
+                    <a href="#"><img src="{% static 'img/asset/nohu/drop/jdb.png'%}" alt=""></a>
+                    <a href="#"><img src="{% static 'img/asset/nohu/drop/jili.png'%}" alt=""></a>
+                    <a href="#"><img src="{% static 'img/asset/nohu/drop/pg.png'%}" alt=""></a>
+                    <a href="#"><img src="{% static 'img/asset/nohu/drop/r88.png'%}" alt=""></a>
+                </div>
+            </button>
+            <button class="navItem">
+                <a href="{% url 'gamebai' %}" class="{% if request.resolver_match.url_name == 'gamebai' %} navlink {% endif %}">GAME BÀI</a>
+                <div class="drop">
+                    <a href="#"><img src="{% static 'img/asset/gamebai/drop/km.png'%}" alt=""></a>
+                    <a href="#"><img src="{% static 'img/asset/gamebai/drop/tp.png'%}" alt=""></a>
+                    <a href="#"><img src="{% static 'img/asset/gamebai/drop/v8.png'%}" alt=""></a>
+                </div>
+            </button>
+            <button class="navItem">
+                <a href="{% url 'banca' %}" class="{% if request.resolver_match.url_name == 'banca' %} navlink {% endif %}">BẮN CÁ</a>
+                <div class="drop">
+                    <a href="#"><img src="{% static 'img/asset/banca/drop/cq9.png'%}" alt=""></a>
+                    <a href="#"><img src="{% static 'img/asset/banca/drop/fc.png'%}" alt=""></a>
+                    <a href="#"><img src="{% static 'img/asset/banca/drop/jdb.png'%}" alt=""></a>
+                    <a href="#"><img src="{% static 'img/asset/banca/drop/jl.png'%}" alt=""></a>
+                    <a href="#"><img src="{% static 'img/asset/banca/drop/ka.png'%}" alt=""></a>
+                    <a href="#"><img src="{% static 'img/asset/banca/drop/r88.png'%}" alt=""></a>
+                </div>
+            </button>
+            <button class="navItem">
+                <a href="{% url 'daga' %}" class="{% if request.resolver_match.url_name == 'daga' %} navlink {% endif %}">ĐÁ GÀ</a>
+                <div class="drop">
+                    <a href="#"><img src="{% static 'img/asset/daga/drop/ws.png'%}" alt=""></a>
+                </div>
+            </button>
+            <button class="navItem">
+                <a href="{% url 'esport' %}" class="{% if request.resolver_match.url_name == 'esport' %} navlink {% endif %}">E-SPORT</a>
+                <div class="drop">
+                    <a href="#"><img src="{% static 'img/asset/esport/drop/Im.png'%}" alt=""></a>
+                    <a href="#"><img src="{% static 'img/asset/esport/drop/saba.png'%}" alt=""></a>
+                </div>
+            </button>
+        </div>
+        </header>
+        {% block content %}
+            
+        {% endblock %}
+        <footer>
+            <div class="img-container">
+                <img src="{% static 'img/asset/Asset30.png' %}" alt="">
+                <p class="overlay-text">KO66.COM được cấp 4 giấy phép hợp pháp đạt chuẩn quốc tế được cấp bởi Chính phủ Philippines (PAGCOR), Chính phủ Malta (MGA), Quẩn đảo Virgin Vương quốc Anh (BVI) & HIệp Hội Nhà Cái Anh (GAMBLING
+                COMMISSION), là một nhà cái cá cược được Hiệp Hội Cá Cược Quốc Tế công nhận. Trước khi đăng ký tham gia đặt cược, vui lòng đảm bảo bạn đã đủ 18 tuổi.</p>
+            </div>
+        </footer>
+</body>
+</html>

@@ -1,0 +1,265 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="banner">
+
+</div>
+<div class="content">
+    <div class="notice">
+        <div class="notice_icon">
+            <img src="{% static 'img/icons/i_horn.png.avif' %}" alt="">
+        </div>
+        <div class="notice_content">
+            <marquee direction="left">
+                <p>{{ notice }}</p>
+            </marquee>
+        </div>
+    </div>
+    <div class="flex chart">
+        <div class="leftchart">
+            <div class="tittle mb24">
+                <div class="flex-left">
+                    <img src="" alt="">
+                </div>
+                <div class="flex-middle fdr-c">
+                    <p class="font32">BẢNG XẾP HẠNG</p>
+                    <p class="font24">TIỀN THẮNG HÔM QUA</p>
+                </div>
+                <div class="flex-right">
+                    <img src="" alt="">
+                </div>
+            </div>
+            <div class="outSide">
+                <div class="inSide">
+                    <ul>
+                        <li class="flex chartItem">
+                            <div class="flex-middle">XẾP HẠNG</div>
+                            <div class="flex-middle">TÀI KHOẢN</div>
+                            <div class="flex-middle">SỐ TIỀN THẮNG</div>
+                        </li>
+                        {% for chart in charts %}
+                        <li class="flex chartItem">
+                            <div class="flex-middle"><img src="{{ chart.img_url }}" alt=""></div>
+                            <!-- <div class="flex-middle"><img src="{% static 'img/icons/chart/1.png' %}" alt=""></div> -->
+                            <div class="flex-middle">{{ chart.username }}</div>
+                            <div class="flex-middle font18">{{ chart.price }}</div>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="rightchart">
+            <div class="tittle mb24">
+                <div class="flex-left">
+                    <img src="" alt="">
+                </div>
+                <div class="flex-middle fdr-c">
+                    <p class="font24">CẬP NHẬT THÔNG TIN</p>
+                    <p class="font32">TRÚNG THƯỞNG</p>
+                </div>
+                <div class="flex-right">
+                    <img src="" alt="">
+                </div>
+            </div>
+            <div class="outSide mb24">
+                <div class="inSide flex jc-sb">
+                    <div class="flex-left fd-c font24" style="flex-shrink: 0;">
+                        <img src="" alt="">
+                        SỐ NGƯỜI ONLINE
+                    </div>
+                    <div class="flex-middle" style="flex-shrink: 0;">
+                        
+                    </div>
+                    <div class="flex-right fd-c font24" style="flex-shrink: 0;">
+                        <img src="" alt="">
+                        TỔNG SỐ TIỀN GIẢI THƯỞNG HÔM NAY
+                    </div>
+                </div>
+            </div>
+            <div class="recentGame mt24">
+                <div class="tittle">
+                    <div class="flex-left">
+                        <img src="" alt="">
+                    </div>
+                    <div class="flex-middle fdr-c">
+                        <p class="font32">TRÒ CHƠI HÀNG ĐẦU</p>
+                    </div>
+                    <div class="flex-right">
+                        <img src="" alt="">
+                    </div>
+                </div>
+                <div class="GameListV3 fw-w mt24">
+                    <div class="GameItem">
+                        <img src="" alt="">
+                        <div class="flex-middle">
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="GameItem">
+                        <img src="" alt="">
+                        <div class="flex-middle">
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="GameItem">
+                        <img src="" alt="">
+                        <div class="flex-middle">
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="GameItem">
+                        <img src="" alt="">
+                        <div class="flex-middle">
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="GameItem">
+                        <img src="" alt="">
+                        <div class="flex-middle">
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="GameItem">
+                        <img src="" alt="">
+                        <div class="flex-middle">
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="GameItem">
+                        <img src="" alt="">
+                        <div class="flex-middle">
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="GameItem">
+                        <img src="" alt="">
+                        <div class="flex-middle">
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hotgame">
+        <div class="tittle mb24">
+            <div class="flex-left">
+                <img src="" alt="">
+            </div>
+            <div class="flex-middle fdr-c">
+                <p class="font32">GAME CỰC CHẤT</p>
+                <p class="font15">GAME CỰC HOT, CHƠI CỰC ĐỈNH</p>
+            </div>
+            <div class="flex-right">
+                <img src="" alt="">
+            </div>
+        </div>
+        <div class="flex mb24">
+            <div class="GameListV2 flex-middle fw-w mt24">
+                <div class="GameItemV5">
+                    <img src="" alt="">
+                    <div class="flex-middle">
+                        <p></p>
+                    </div>
+                </div>
+                <div class="GameItemV5">
+                    <img src="" alt="">
+                    <div class="flex-middle">
+                        <p></p>
+                    </div>
+                </div>
+                <div class="GameItemV5">
+                    <img src="" alt="">
+                    <div class="flex-middle">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex-sb mb24">
+            <div class="GameListV2 flex-middle fw-w mt24">
+                <div class="GameItemV6">
+                    <img src="" alt="">
+                    <div class="flex-middle">
+                        <p></p>
+                    </div>
+                </div>
+                <div class="GameItemV6">
+                    <img src="" alt="">
+                    <div class="flex-middle">
+                        <p></p>
+                    </div>
+                </div>
+                <div class="GameItemV6">
+                    <img src="" alt="">
+                    <div class="flex-middle">
+                        <p></p>
+                    </div>
+                </div>
+                <div class="GameItemV6">
+                    <img src="" alt="">
+                    <div class="flex-middle">
+                        <p></p>
+                    </div>
+                </div>
+                <div class="GameItemV6">
+                    <img src="" alt="">
+                    <div class="flex-middle">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="severvice">
+        <div class="tittle mb24">
+            <div class="flex-left">
+                <img src="" alt="">
+            </div>
+            <div class="flex-middle fdr-c">
+                <p class="font32">CHẤT LƯỢNG DỊCH VỤ</p>
+                <p class="font15">AN TOÀN ỔN ĐỊNH</p>
+            </div>
+            <div class="flex-right">
+                <img src="" alt="">
+            </div>
+        </div>
+        
+        <div class="flex-sb mb24">
+            <div class="flex-middle fdr-c">
+                <img width="40%" src="{% static 'img/asset/Asset31.svg' %}" alt="">
+                <p class="font18">TRUNG BÌNH</p>
+                <p class="font15">THỜI GIAN NẠP TIỀN</p>
+                <div class="mt24 mb24 GameItemV7 font24" id="AnToan">
+
+                </div>
+            </div>
+            <div class="flex-middle fdr-c">
+                <img width="40%" src="{% static 'img/asset/Asset32.svg' %}" alt="">
+                <p class="font18">HỢP TÁC</p>
+                <p class="font15">HỖ TRỢ TRANG WEB</p>
+                <div class="flex-middle mt24 mb24 GameItemV7 font24" id="ChuyenNghiep">
+                </div>
+            </div>
+            <div class="flex-middle fdr-c">
+                <img width="40%" src="{% static 'img/asset/Asset33.svg' %}" alt="">
+                <p class="font18">TRUNG BÌNH</p>
+                <p class="font15">THỜI GIAN RÚT TIỀN</p>
+                <div class="flex-middle mt24 mb24 GameItemV7 font24" id="TocDo">
+                </div>
+            </div>
+            <div class="flex-middle fdr-c">
+                <img width="40%" src="{% static 'img/asset/Asset34.svg' %}" alt="">
+                <p class="font18">HỢP TÁC</p>
+                <p class="font15">TRANG WEB TRÒ CHƠI</p>
+                <div class="flex-middle mt24 mb24 GameItemV7 font24" id="ThuanTien">
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+{% endblock %}
