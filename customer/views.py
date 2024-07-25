@@ -2,6 +2,8 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
 from .models import *
+from ko66new import settings
+import os
 # Create your views here.
 
 def index(request):
@@ -24,52 +26,95 @@ def index(request):
 def hot(request):
     # hotItems = LobbyItem.objects.filter(lobby='hot').values()
     template = loader.get_template('hot.html')
-    return HttpResponse(template.render())
+    
+    context = {
+        "img_list": "",
+    }
+    return HttpResponse(template.render(context, request))
 
 def casino(request):
-    # casinoItems = LobbyItem.objects.filter(lobby='casino').values()
+    img_list = ['AG-truc-tuyen.png', 'BG-truc-tuyen.png', 'DB-truc-tuyen.png', 'DG-truc-tuyen.png', 'EVO-truc-tuyen.png', 'MG-truc-tuyen.png', 'MT-truc-tuyen.png', 'ON-truc-tuyen.png', 'PT-truc-tuyen.png', 'SA-truc-tuyen.png', 'SEXY-truc-tuyen.png', 'TP-truc-tuyen.png', 'VIA-truc-tuyen.png', 'WM-truc-tuyen.png']
+    print("=====================================/n")
+    print(img_list)
+    print("=====================================/n")
+    context = {
+        "img_list": img_list,
+    }
+    # img_list1 = os.listdir("/static/img/asset/casino/")
     template = loader.get_template('casino.html')
-    return HttpResponse(template.render())
+    return HttpResponse(template.render(context, request))
 
 def thethao(request):
     # thethaoItems = LobbyItem.objects.filter(lobby='thethao').values()
     template = loader.get_template('thethao.html')
-    return HttpResponse(template.render())
+    
+    context = {
+        "img_list": "",
+    }
+    return HttpResponse(template.render(context, request))
 
 def xoso(request):
     # xosoItems = LobbyItem.objects.filter(lobby='xoso').values()
     template = loader.get_template('xoso.html')
-    return HttpResponse(template.render())
+    
+    context = {
+        "img_list": "",
+    }
+    return HttpResponse(template.render(context, request))
 
 def nohu(request):
     # nohuItems = LobbyItem.objects.filter(lobby='nohu').values()
     template = loader.get_template('nohu.html')
-    return HttpResponse(template.render())
+    
+    context = {
+        "img_list": "",
+    }
+    return HttpResponse(template.render(context, request))
 
 def gamebai(request):
     # gamebaiItems = LobbyItem.objects.filter(lobby='gamebai').values()
     template = loader.get_template('gamebai.html')
-    return HttpResponse(template.render())
+    
+    context = {
+        "img_list": "",
+    }
+    return HttpResponse(template.render(context, request))
 
 def banca(request):
     # bancaItems = LobbyItem.objects.filter(lobby='banca').values()
     template = loader.get_template('banca.html')
-    return HttpResponse(template.render())
+    
+    context = {
+        "img_list": "",
+    }
+    return HttpResponse(template.render(context, request))
 
 def esport(request):
     # esportItems = LobbyItem.objects.filter(lobby='esport').values()
     template = loader.get_template('esport.html')
-    return HttpResponse(template.render())
+    
+    context = {
+        "img_list": "",
+    }
+    return HttpResponse(template.render(context, request))
 
 def daga(request):
     # esportItems = LobbyItem.objects.filter(lobby='esport').values()
     template = loader.get_template('daga.html')
-    return HttpResponse(template.render())
+    
+    context = {
+        "img_list": "",
+    }
+    return HttpResponse(template.render(context, request))
 
 def khuyenmai(request):
     # khuyenmaiItems = LobbyItem.objects.filter(lobby='khuyenmai').values()
     template = loader.get_template('khuyenmai.html')
-    return HttpResponse(template.render())
+    
+    context = {
+        "img_list": "",
+    }
+    return HttpResponse(template.render(context, request))
 
 def test(request):
     # lobbys = MainLobby.objects.all().values()

@@ -4,51 +4,11 @@
     <div class="flex-middle casino">
         <div class="layoutV2">
             <div class="GameList flex-middle fw-w mt24">
-                <div class="GameItem">
-                    <img src="" alt="">
-                    <div class="flex-middle">
-                        <p>DG CASINO</p>
+                {% for image in img_list %}
+                    <div class="GameItem">
+                        <img src="/static/img/asset/casino/{{image}}" alt="">
                     </div>
-                </div>
-                <div class="GameItem">
-                    <img src="" alt="">
-                </div>
-                <div class="GameItem">
-                    <img src="" alt="">
-                </div>
-                <div class="GameItem">
-                    <img src="" alt="">
-                </div>
-                <div class="GameItem">
-                    <img src="" alt="">
-                </div>
-                <div class="GameItem">
-                    <img src="" alt="">
-                </div>
-                <div class="GameItem">
-                    <img src="" alt="">
-                </div>
-                <div class="GameItem">
-                    <img src="" alt="">
-                </div>
-                <div class="GameItem">
-                    <img src="" alt="">
-                </div>
-                <div class="GameItem">
-                    <img src="" alt="">
-                </div>
-                <div class="GameItem">
-                    <img src="" alt="">
-                </div>
-                <div class="GameItem">
-                    <img src="" alt="">
-                </div>
-                <div class="GameItem">
-                    <img src="" alt="">
-                </div>
-                <div class="GameItem">
-                    <img src="" alt="">
-                </div>
+                {% endfor %}
             </div>
         </div>
     </div>

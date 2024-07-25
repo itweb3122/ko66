@@ -17,8 +17,10 @@
         <div class="topHeader">
             <div class="sideHeader">
                 <div class="lefthead">
-                    <a href="{% url 'index' %}"><img src="{% static 'img/asset/nav/logo.png' %}" alt=""></a>
+                    <a href="{% url 'index' %}"><img src="{% static 'img/asset/logo.png' %}" alt=""></a>
                 </div>
+                <h1 style="line-height: 80px; color: #fff; text-align: left;">KO66</h1>
+                <div style="width: 400px;"></div>
                 <div class="righthead">
                     <div class="userInfo">
                     </div>
@@ -37,10 +39,13 @@
         </div>
         <div class="mainHeader">
             <button class="navItem" id="noDrop">
-                <a href="{% url 'hot' %}" class="{% if request.resolver_match.url_name == 'hot' %} navlink {% endif %}">HOT</a>
+                <a href="{% url 'index' %}" class="{% if url_name == '/' %}navlink{% endif %}">TRANG CHỦ</a>
+            </button>
+            <button class="navItem" id="noDrop">
+                <a href="{% url 'hot' %}" class="{% if url_name == 'hot' %}navlink{% endif %}">HOT</a>
             </button>
             <button class="navItem">
-                <a href="{% url 'casino' %}" class="{% if request.resolver_match.url_name == 'casino' %} navlink {% endif %}">CASINO</a>
+                <a href="{% url 'casino' %}" class="{% if url_name == 'casino' %}navlink{% endif %}">CASINO</a>
                 <div class="drop">
                     <a href="#"><img src="{% static 'img/asset/casino/drop/DG.jpg'%}" alt=""></a>
                     <a href="#"><img src="{% static 'img/asset/casino/drop/SE.jpg'%}" alt=""></a>
@@ -51,7 +56,7 @@
                 </div>
             </button>
             <button class="navItem">
-                <a href="{% url 'thethao' %}" class="{% if request.resolver_match.url_name == 'thethao' %} navlink {% endif %}">THỂ THAO</a>
+                <a href="{% url 'thethao' %}" class="{% if url_name == 'thethao' %}navlink{% endif %}">THỂ THAO</a>
                 <div class="drop">
                     <a href="#"><img src="{% static 'img/asset/thethao/drop/cmd.jpg'%}" alt=""></a>
                     <a href="#"><img src="{% static 'img/asset/thethao/drop/cr.jpg'%}" alt=""></a>
@@ -62,7 +67,7 @@
                 </div>
             </button>
             <button class="navItem">
-                <a href="{% url 'xoso' %}" class="{% if request.resolver_match.url_name == 'xoso' %} navlink {% endif %}">LÔ ĐỀ</a>
+                <a href="{% url 'xoso' %}" class="{% if url_name == 'xoso' %}navlink{% endif %}">LÔ ĐỀ</a>
                 <div class="drop">
                     <a href="#"><img src="{% static 'img/asset/xoso/drop/gw.jpg'%}" alt=""></a>
                     <a href="#"><img src="{% static 'img/asset/xoso/drop/sw.jpg'%}" alt=""></a>
@@ -71,7 +76,7 @@
                 </div>
             </button>
             <button class="navItem">
-                <a href="{% url 'nohu' %}" class="{% if request.resolver_match.url_name == 'nohu' %} navlink {% endif %}">NỔ HŨ</a>
+                <a href="{% url 'nohu' %}" class="{% if url_name == 'nohu' %}navlink{% endif %}">NỔ HŨ</a>
                 <div class="drop">
                     <a href="#"><img src="{% static 'img/asset/nohu/drop/cq9.png'%}" alt=""></a>
                     <a href="#"><img src="{% static 'img/asset/nohu/drop/fc.png'%}" alt=""></a>
@@ -82,7 +87,7 @@
                 </div>
             </button>
             <button class="navItem">
-                <a href="{% url 'gamebai' %}" class="{% if request.resolver_match.url_name == 'gamebai' %} navlink {% endif %}">GAME BÀI</a>
+                <a href="{% url 'gamebai' %}" class="{% if url_name == 'gamebai' %}navlink{% endif %}">GAME BÀI</a>
                 <div class="drop">
                     <a href="#"><img src="{% static 'img/asset/gamebai/drop/km.png'%}" alt=""></a>
                     <a href="#"><img src="{% static 'img/asset/gamebai/drop/tp.png'%}" alt=""></a>
@@ -90,7 +95,7 @@
                 </div>
             </button>
             <button class="navItem">
-                <a href="{% url 'banca' %}" class="{% if request.resolver_match.url_name == 'banca' %} navlink {% endif %}">BẮN CÁ</a>
+                <a href="{% url 'banca' %}" class="{% if url_name == 'banca' %}navlink{% endif %}">BẮN CÁ</a>
                 <div class="drop">
                     <a href="#"><img src="{% static 'img/asset/banca/drop/cq9.png'%}" alt=""></a>
                     <a href="#"><img src="{% static 'img/asset/banca/drop/fc.png'%}" alt=""></a>
@@ -101,13 +106,13 @@
                 </div>
             </button>
             <button class="navItem">
-                <a href="{% url 'daga' %}" class="{% if request.resolver_match.url_name == 'daga' %} navlink {% endif %}">ĐÁ GÀ</a>
+                <a href="{% url 'daga' %}" class="{% if url_name == 'daga' %}navlink{% endif %}">ĐÁ GÀ</a>
                 <div class="drop">
                     <a href="#"><img src="{% static 'img/asset/daga/drop/ws.png'%}" alt=""></a>
                 </div>
             </button>
             <button class="navItem">
-                <a href="{% url 'esport' %}" class="{% if request.resolver_match.url_name == 'esport' %} navlink {% endif %}">E-SPORT</a>
+                <a href="{% url 'esport' %}" class="{% if url_name == 'esport' %}navlink{% endif %}">E-SPORT</a>
                 <div class="drop">
                     <a href="#"><img src="{% static 'img/asset/esport/drop/Im.png'%}" alt=""></a>
                     <a href="#"><img src="{% static 'img/asset/esport/drop/saba.png'%}" alt=""></a>

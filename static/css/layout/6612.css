@@ -97,17 +97,8 @@ input[type="search"] {
     background-size: contain;
     background-repeat: no-repeat;
 }
-input[type="search"]:active {
-    border: 4px solid #55a5da;
-    border-radius: 25px;
-}
-input[type="search"]:focus {
-    border: 4px solid #55a5da;
-    border-radius: 25px;
-}
-input[type="search"]:target {
-    border: 4px solid #55a5da;
-    border-radius: 25px;
+*:focus-visible {
+    outline: none;
 }
 .filterGame {
     display: flex;
@@ -164,7 +155,9 @@ input[type="search"]:target {
     height: 68%;
 } */
 .GameItem img, .GameItemV1 img, .GameItemV2 img, .GameItemV5 img, .GameItemV6 img, .GameItemV7 img {
-    height: 68%;
+    width: 100%;
+    position: relative;
+    bottom: 11%;
 }
 .GameItem .flex-middle, .GameItemV1 .flex-middle, .GameItemV2 .flex-middle, .GameItemV3 .flex-middle, .GameItemV5 .flex-middle, .GameItemV6 .flex-middle, .GameItemV7 .flex-middle {
     height: 25%;
